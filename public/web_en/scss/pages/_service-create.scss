@@ -1,0 +1,14 @@
+#galleryWrapper{
+    position: relative;
+    overflow: hidden;
+    #galleryAdd{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($color-white,.9) !important;
+        width: 100%;
+        &:not(.active){
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    direction: rtl;
+    font-size: 15px;
+    color: $color-grey-dark;
+    @include media-md{
+      font-size: 16px;
+  }
+    @include media-xl{
+      font-size: 17px;
+  }
+    @include media-xxl{
+        font-size: 20px;
+    }
+    font-weight: 700;
+}
+
+body{
+    font-family: font-primary, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey;
+    box-sizing: border-box;
+    background-color: #FCFCFC;
+}
+
+a{
+    text-decoration: none;
+    color: $color-primary;
+    transition: all .2s;
+    &:hover{
+      color: $color-primary-dark !important;
+      .btn-primary{
+        background-color: $color-primary-dark;
+      }
+    }
+}
+
+input{
+  &[type="email"]{
+    direction: rtl !important;
+  }
+}
+ul {
+  list-style: none; /* Remove default bullets */
+  padding-right: 1.05rem;
+}
+.bullet-list li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: $color-primary; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-right: -1em; /* Also needed for space (tweak if needed) */
+}
+
+main{
+  // min-height: calc(100vh - 172px);
+  min-height: calc(100vh - 6.8rem);
+
+}
+
+img{
+  max-width: 100%;
+}
+
+// .row{
+//   margin-left: 0 !important;
+//   margin-right: 0 !important;
+//   &>*{
+//     padding-left: 0 !important;
+//     padding-right: 0 !important;
+//   }
+// }
+
+// ::-webkit-scrollbar {
+//     width: 5px;
+//   }
+  
+//   ::-webkit-scrollbar-track {
+//     background: $color-grey-lightest;
+//   }
+  
+//   ::-webkit-scrollbar-thumb {
+//     background: $color-grey-light;
+//   }
+  
+//   ::-webkit-scrollbar-thumb:hover {
+//     background: $color-grey;
+//   } 
+

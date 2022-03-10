@@ -1,0 +1,10 @@
+.section{
+    .section-title{
+        margin-bottom: calc(#{$main-margin}/2);
+    }
+  
+    &-testimonials{
+        @include site-padding;
+        overflow: hidden;
+    } 
+}

@@ -1,0 +1,69 @@
+.section{
+    .section-title{
+        margin-bottom: calc(#{$main-margin}/2);
+    }
+    &-welcome-banner{
+        margin-top: calc(#{$main-margin}/2);
+
+        @include site-padding;
+
+        .section-welcome-banner-start{
+            border-radius: 5px;
+            border: 1px solid $color-grey-light;
+            h2{
+                @include font-xl;
+            }
+            background-color: $color-grey-lighter;
+            padding: 2rem;
+        }
+        .section-welcome-banner-end{
+            border-radius: 5px;
+            min-height: 16rem;
+            .welcome-image{
+                @include bg-img;
+                height: 100%;
+                color: $color-white;
+                @include tint(0,0,0,.5);
+                padding: 2rem;
+                @include media-lg{
+                    padding: 3rem;
+                }
+                @include media-xl{
+                    padding: 5rem;
+                }
+                border-radius: 5px;
+
+                .welcome-title{
+                    @include font-xl;
+                }
+                .welcome-subtitle{
+                    @include font-sm;
+                    margin-right: 1rem;
+                    padding-bottom: 1rem;
+                    @include media-lg{
+                        margin-right: 2.5rem;
+                        padding-bottom: 0rem;
+                    }
+                    @include media-xl{
+                        margin-right: 5rem;
+                    }
+                }
+            }
+        }
+    }
+    &-new-services{
+        @include site-padding;
+        .section-title{
+            margin-top: calc(#{$main-margin}/2) !important;
+        }
+    } 
+    &-recommended-services{
+        @include site-padding;
+    }
+    &-faqs{
+        @include site-padding;
+    }
+    &:last-child:not(.section-start-now){
+        margin-bottom: $main-margin;
+    }
+}

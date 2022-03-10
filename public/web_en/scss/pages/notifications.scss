@@ -1,0 +1,10 @@
+.notifications-list{
+    max-height: 50vh;
+    overflow-y: scroll;
+    .notification-title{
+        @include font-md;
+        @include media-md{
+            @include font-lg;
+        }
+    }
+}
